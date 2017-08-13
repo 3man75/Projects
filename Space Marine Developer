@@ -1,0 +1,39 @@
+public class BlankMarines {
+	
+	private String Name;
+	private String Weapon;
+	private int Health;
+	
+	
+	public BlankMarines(){
+		Name = "Recruit";
+		Weapon = "Bolter";
+		Health = 10;
+	}
+	
+	public String toString (){
+		return String.format( Name+ " " + Weapon+ " " + Health);
+	}
+}
+
+public class InputMechanisms {
+
+	public static void main(String[] args) {
+		
+		BlankMarines SpaceMarineChapter[] = new BlankMarines[1000];
+		
+		for (int x = 0; x < 1000; x++){
+			BlankMarines SpaceMarine = new BlankMarines();
+			
+			SpaceMarineChapter[x] = new BlankMarines();
+		}
+		
+		System.out.println("We have a space Marine:" + SpaceMarineChapter[3]);
+		System.out.println("We have a space Marine:" + SpaceMarineChapter[800]);//returns null
+		System.out.println("We have a space Marine:" + SpaceMarineChapter[47]); //returns null
+		
+		for (int y = 0; y < 1000; y++){
+			System.out.println("We have a space Marine:" + SpaceMarineChapter[y]);
+		}
+	}
+}
