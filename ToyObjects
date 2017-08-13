@@ -1,0 +1,32 @@
+public class ToyObjects {
+	
+	String ToyName;//user inputs this
+	int Barcode; //make a seprate class to generate random barcode
+	Double Price; //same as above
+	ReturnPolicy ReturnPolicy; //done
+	
+	ToyObjects (String name){
+		ToyName = name;
+	}
+}
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class ReturnPolicy {
+	
+	public ReturnPolicy(){
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		Date date = new Date();
+		System.out.println(dateFormat.format(date));
+	}
+}
+
+public class Casheir {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ReturnPolicy DateOfItem = new ReturnPolicy();
+	}
+}
